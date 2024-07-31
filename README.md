@@ -22,10 +22,10 @@ Members:
 
 ## Algorithm:
 
-#### Breadth-first search:
-It involves visiting all the connected nodes of the maze in a level-by-level manner.
+#### Depth-first search:
+It involves visiting all the connected nodes of the maze one by one and explores the whole node till it reaches a dead end.
 
-https://github.com/user-attachments/assets/60136948-c322-4cfd-9356-9ca11ac03a63
+https://github.com/user-attachments/assets/37cedd89-f50f-4885-8b83-93ec46379572
 
 #### Dijkstra's Algorithm:
 It is an algorithm for finding the shortest paths between nodes in a weighted graph, which may represent, for example, road networks.
@@ -60,8 +60,17 @@ The microcontroller is the brain of our mouse. It carries out all the computatio
 
 We finalised STM32F103C8T6 for our micromouse.
 
+[![image](https://github.com/user-attachments/assets/3467e8be-3836-4f71-94ee-8dc964868ad5)](https://amzn.in/d/0bSwpOCw)
+
 #### Sensors:
 Sensors are the eyes of our mouse. They help the mouse detect where the walls are and move in the center of the maze, without colliding into the wall. After much thought, we went with IR sensors and ultrasonic sensors.
+IR sensor:
+
+[![image](https://github.com/user-attachments/assets/d71686f1-1642-4919-a595-22a4281b6984)](https://amzn.in/d/0gtZircN)
+
+Ultrsonic sensor:
+
+[![image](https://github.com/user-attachments/assets/9b5915ac-70ba-4bba-b01c-ef9e3902eaf1)](https://amzn.in/d/07U2rYYQ)
 
 #### Motor:
 We needed a high rpm, accurate, and compact motor. A comparison was done keeping in mind these factors.
@@ -69,14 +78,20 @@ We needed a high rpm, accurate, and compact motor. A comparison was done keeping
 
 We chose N20 metal gear motors since they are powerful and compact.
 
+[![image](https://github.com/user-attachments/assets/33b87dea-ba02-421c-95e2-57e854f07e0f)](https://kitsguru.com/products/n20-12v-micro-metal-gear-motor-1)
+
 #### Motor-Driver:
 We needed a motor driver which is accurate and has a voltage range which can drive our motors.
 ![image](https://github.com/user-attachments/assets/bfe7878a-f8fc-40c2-8e50-5fde1acced8e)
 
 After a detailed comparison, we locked our choice on TB6612FNG Dual H-Bridge motor driver.
 
+[![image](https://github.com/user-attachments/assets/2e4f83a1-453b-4451-b2dd-6ba87834260c)](https://amzn.in/d/0hxGYsam)
+
 #### IMU sensor:
 An inertial measurement unit sensor was needed for the bot to know where in the maze it exactly is. Finalised IMU was MPU6050 which is a 6-axis IMU sensor.
+
+[![image](https://github.com/user-attachments/assets/5f13fc47-4a70-4f67-83ba-d1ca8c32a3a1)](https://amzn.in/d/0cyMVpJJ)
 
 #### Power source:
 The power source was required to provide power to all the components sufficiently. We first noted down how much power each component took.
@@ -92,7 +107,25 @@ After comparing different power sources, we chose two 3.7V lithium ion cell.
 
 [![image](https://github.com/user-attachments/assets/2cbe90ad-7e32-4861-8324-9c65160a946d)](https://amzn.in/d/0if9jwKN)
 
+## Optimizations:
+Due to constraints in time and lack of resources, we were unable to optimize much of it performance, but we optimized floodfill to follow more straighter paths.
 
+https://github.com/user-attachments/assets/ca8f1371-aa1d-4062-a40a-bfb3aeb7d7fa
+
+## References:
+- https://github.com/mackorone/mms
+- https://projects.ieeebruins.com/micromouse/
+- https://youtu.be/ktn3C7aXVR0?feature=shared 
+- https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/ 
+- https://en.wikipedia.org/wiki/Dijkstra's_algorithm 
+- https://www.geeksforgeeks.org/flood-fill-algorithm/ 
+- https://en.wikipedia.org/wiki/Depth-first_search 
+- https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
+- https://github.com/mackorone/breadth-first-search
+- https://en.wikipedia.org/wiki/Breadth-first_search 
+- https://en.wikipedia.org/wiki/A*_search_algorithm 
+- https://www.geeksforgeeks.org/a-search-algorithm/ 
+- https://youtu.be/EPDAweXxKJ4?si=ESgo3BmEeuBTNCYC 
 
 
 
